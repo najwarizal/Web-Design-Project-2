@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-	
     <title>Bouncing Ball Game</title>
 </head>
 <body>
@@ -13,6 +12,22 @@
         <h1>Bouncing Ball Game</h1>
     </header>
     <div class="container">
+		<div class="contact">
+		
+			<!-- Contact Button -->
+			<button id="callButton">Make a Call</button>
+			<button id="emailButton">Send Email</button>
+			<button id="smsButton">Send SMS</button>
+			
+			<!-- Call Button -->
+			<a id="callLink" href="tel:+123456789"></a>
+			
+			<!-- Email Button -->
+			<a id="emailLink" href="mailto:info@example.com"></a>
+			
+			<!-- SMS/WhatsApp Button -->
+			<a id="whatsappLink" href="https://wa.me/123456789"></a>
+		</div>
         <div class="box">
             <div class="ball" id="ball"></div>
             <div class="paddle" id="paddle"></div>
@@ -31,5 +46,22 @@
     </div>
 	 <audio id="bounceSound" src="bouncing.wav"></audio>
     <script src="script.js"></script>
+	<script>
+	
+        // JavaScript code to associate button clicks with anchor clicks
+        $(document).ready(function () {
+            $("#callButton").click(function () {
+                $("#callLink")[0].click();
+            });
+
+            $("#emailButton").click(function () {
+                $("#emailLink")[0].click();
+            });
+
+            $("#smsButton").click(function () {
+                $("#whatsappLink")[0].click();
+            });
+        });
+    </script>
 </body>
 </html>
