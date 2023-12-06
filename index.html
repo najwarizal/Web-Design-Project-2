@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+	
+    <title>Bouncing Ball Game</title>
+</head>
+<body>
+    <header>
+        <h1>Bouncing Ball Game</h1>
+    </header>
+    <div class="container">
+        <div class="box">
+            <div class="ball" id="ball"></div>
+            <div class="paddle" id="paddle"></div>
+        </div>
+		<p><span id="lives">Lives: 0</span> | <span id="timer">Time: 0.00s</span>   |  <span id="points">Points: 0</span></p>
+        <button id="restartBtn">Restart Game</button>
+		<table id="scoreTable">
+		<thead>
+                <tr>
+                    <th>Player Name</th>
+					<td id="playerName" class="centered"></td>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+	 <audio id="bounceSound" src="bouncing.wav"></audio>
+    <script src="script.js"></script>
+</body>
+</html>

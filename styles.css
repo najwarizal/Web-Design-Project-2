@@ -1,0 +1,93 @@
+body {
+    margin: 0;
+    overflow: hidden;
+	font-family: Montserrat;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+h1 {
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #FFDBDB;
+}
+
+.box {
+    position: relative;
+    width: 80vmin; /* Adjust for different resolutions */
+    height: 50vmin; /* Adjust for different resolutions */
+	border-left: 3px solid black;
+	border-right: 3px solid black;
+	border-top: 3px solid black;
+    overflow: hidden;
+    background-color: green;
+}
+
+.ball, .paddle {
+    position: absolute;
+    background-color: #3498db;
+}
+
+.ball {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: red;
+}
+
+.paddle {
+    width: 100px;
+    height: 20px;
+    bottom: 0;
+    border-bottom: 1px solid red;
+}
+
+
+#playerName.centered {
+    text-align: center;
+}
+
+/* Desktop styles */
+@media screen and (min-width: 1240px) and (min-height: 900px) {
+    .box {
+        width: 80vmin;
+        height: 50vmin;
+    }
+
+    .paddle {
+        width: 100px;
+    }
+
+    .ball {
+        top: 30px;
+    }
+}
+
+/* Tablet styles */
+@media screen and (max-width: 768px) and (max-height: 1024px) {
+    .box {
+        width: 80vmin;
+        height: 50vmin;
+    }
+
+    .paddle {
+        width: 80px;
+    }
+
+    .ball {
+        top: 20px;
+    }
+}
+
