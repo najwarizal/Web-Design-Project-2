@@ -91,3 +91,36 @@ h1 {
     }
 }
 
+/* Contact buttons */
+.contact button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.contact button:hover {
+    background-color: #2980b9;
+}
+
+/* Restart button */
+.container button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.container button:hover {
+    background-color: #2980b9;
+}
