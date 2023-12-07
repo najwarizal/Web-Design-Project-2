@@ -4,11 +4,13 @@ $(document).ready(function() {
     const box = document.querySelector(".box");
     const scoreTableBody = $("#scoreTable tbody");
 
+	//set ball speed
     let ballX = box.offsetWidth / 2 - ball.offsetWidth / 2;
     let ballY = box.offsetHeight / 2 - ball.offsetHeight / 2;
     let ballSpeedX = 4;
     let ballSpeedY = 6;
 
+	//initializes game
     let lives = 3;
     let points = 0;
     let gameOver = false;
@@ -135,6 +137,16 @@ $(document).ready(function() {
 
     // Function to move the paddle
     function movePaddle(event) {
+		let clientX;
+		
+		if(event.type =="touchmove"){
+			// For touch events, use the first touch point
+            clientX = event.touches[0].clientX;
+        } else {
+            // For mouse events, use the clientX property directly
+            clientX = event.clientX;
+        }
+		
         // Move the paddle within the box
         const paddleX = Math.min(Math.max(event.clientX - box.getBoundingClientRect().left - paddle.offsetWidth / 2, 0), box.offsetWidth - paddle.offsetWidth);
         paddle.style.left = paddleX + "px";
@@ -154,6 +166,9 @@ $(document).ready(function() {
 
     // Event listener for mouse movement to move the paddle
     $(document).on("mousemove", movePaddle);
+	
+	// Event listener for touch movement to move the paddle
+    document.addEventListener("touchmove", movePaddle);
 
     // Call promptForName initially to get player's name
     promptForName();
