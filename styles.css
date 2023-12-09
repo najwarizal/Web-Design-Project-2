@@ -1,126 +1,134 @@
-body {
-    margin: 0;
-    overflow: hidden;
-	font-family: Montserrat;
+/* Reset default margin and padding */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  text-align: center;
 }
 
-header {
-    text-align: center;
-    padding: 20px;
-    background-color: #333;
-    color: white;
+/* Set minimum height for pages */
+[data-role="page"] {
+  height: 100%;
 }
 
-h1 {
-    margin: 0;
+[data-role="main"]{
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+	height: 100vh;
+	position: relative;
+	padding-left: 50px;
+	font-family: 'Montserrat', sans-serif;
 }
 
-.container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    height: 100vh;
-    background-color: #FFDBDB;
-}
-
-.box {
-    position: relative;
-    width: 80vmin; /* Adjust for different resolutions */
-    height: 50vmin; /* Adjust for different resolutions */
-	border-left: 3px solid black;
-	border-right: 3px solid black;
-	border-top: 3px solid black;
-    overflow: hidden;
-    background-color: green;
-}
-
-.ball, .paddle {
-    position: absolute;
-    background-color: #3498db;
-}
-
-.ball {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background-color: red;
-}
-
-.paddle {
-    width: 100px;
-    height: 20px;
-    bottom: 0;
-    border-bottom: 1px solid red;
+[data-role="main"] .main_content {
+    padding-top: 50px;
+	align-items: left;
+	text-align: left;
+	font-size: 60px;
 }
 
 
-#playerName.centered {
-    text-align: center;
+/* Reset padding and margin for content */
+[data-role="content"] {
+	padding: 0;
+	margin: 0;
 }
 
-/* Desktop styles */
-@media screen and (min-width: 1240px) and (min-height: 900px) {
-    .box {
-        width: 80vmin;
-        height: 50vmin;
-    }
-
-    .paddle {
-        width: 100px;
-    }
-
-    .ball {
-        top: 30px;
-    }
+/* Header and Footer styles */
+[data-role="header"], 
+[data-role="footer"] {
+	background-color: #91A8D0; /* Serenity Blue */
+	color: #fff;
+	text-align: center;
+	padding: 10px;
 }
 
-/* Tablet styles */
-@media screen and (max-width: 768px) and (max-height: 1024px) {
-    .box {
-        width: 80vmin;
-        height: 50vmin;
-    }
-
-    .paddle {
-        width: 80px;
-    }
-
-    .ball {
-        top: 20px;
-    }
+[data-role="nav-bar"]  {
+	background-color: #91A8D0; /* Serenity Blue */
+	display: flex;
+	align-items: center;
+	justify-content: flex; 
 }
 
-/* Contact buttons */
-.contact button {
-    background-color: #3498db;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    margin: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+
+[data-role="nav-bar"] img {
+	margin-right: 100px;
+
 }
 
-.contact button:hover {
-    background-color: #2980b9;
+/* Nav bar / Listview  */
+[data-role="listview"] {
+	text-decoration: none;
+	list-style-type: none;
+	text-align: center; /* Center the list items */
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin: 0;
+	padding: 0;
 }
 
-/* Restart button */
-.container button {
-    background-color: #3498db;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    margin: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+/* Nav bar / List item */
+[data-role="listview"] li {
+	text-decoration: none;
+	display: inline-block;
+	margin-right: 10px; /* Adjust the spacing between menu items */
 }
 
-.container button:hover {
-    background-color: #2980b9;
+
+[data-role="listview"] a {
+	padding-right: 80px;
+	padding-left: 80px;
+	color: #333;
+	text-align: center;
+	text-decoration: none;
+	transition: 0.1s;
+}
+
+[data-role="listview"] a:hover {
+	color: #F0D1C9; 
+}
+
+/* Button styles */
+[data-role="button"] {
+  background-color: #795C34; 
+  color: white;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}
+
+[data-role="button"]:hover {
+  background-color: #d1bb92; 
+}
+
+#home,
+#overview,
+#aboutUs,
+#services,
+#contact{
+  background-color: #F0D1C9;
+}
+
+/* Add media queries for responsive design */
+@media screen and (max-width: 600px) {
+  [data-role="main"] {
+    padding-left: 20px;
+  }
+
+  [data-role="nav-bar"] img {
+    margin-right: 20px;
+  }
+
+  [data-role="listview"] a {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
 }
