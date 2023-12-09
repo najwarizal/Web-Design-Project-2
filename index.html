@@ -1,158 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>CarePharmacy</title>
-  
-  <!-- jQuery CDN -->
-  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
-  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-  
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-  
-	<!-- external icon from font-awesome -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  
-  <!-- CSS -->
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <title>Bouncing Ball Game</title>
 </head>
 <body>
-	<div data-role="page" id="home" data-theme="a" class="active" data-ajax="false">
-	  <div data-role="nav-bar">
-		<img src="images/logo.png" width="100px" height= "100px">
-		<ul data-role="listview" class="horizontal-list">
-			<li><a href="#home"> Home </a></li>
-			<li><a href="#overview"> Overview </a></li>
-			<li><a href="#aboutUs"> About Us </a></li>
-			<li><a href="#services"> Services </a></li>
-			<li><a href="#contact"> Contact Us </a></li>
-		</ul>
-	  </div>
-	  
-		<div data-role="main">
-			<div class = "main_content">	
-				<div class="main_text">
-					<h2>Best<br>Healthcare<br>For You.</h2>
-					<a href="#customDialog" id="openDialogButton" data-role="button">Open Dialog</a>
-				</div>
-			</div>
-		</div>
-	
-	</div>
-
-	<!-- Menu 1 -->
-	<div data-role="page" id="overview" data-theme="b">
-	  <div data-role="header">
-		<h1>Overview</h1>
-	  </div>
-
-	  <div data-role="content">
-		<p>We dedicate ourselves to our customers.</p>
-		<p>We strive to be the most appreciated and admired Pharmacy Brand.</p>
-		<a href="#home" data-role="button" data-transition="slide" data-direction="reverse">
-		  <i class="fas fa-arrow-left"></i> Back to Home
-		</a>
-	  </div>
-
-	  <div data-role="footer" data-position="fixed">
-		<h4>By: Nur Najwa</h4>
-	  </div>
-	</div>
-
-	<!-- Menu 2 -->
-	<div data-role="page" id="aboutUs" data-theme="c">
-	  <div data-role="header">
-		<h1>About Us</h1>
-	  </div>
-
-	  <div data-role="content">
-		<p>PharmacyCare was established to help people keep healthy and help cure sickness.</br>
-		We have many medicines available at PharmacyCare.</br>
-		In 2023, PharmacyCare has opened 10 branches</br>
-		in Malaysia and we strive to expand our business to overseas.</p>
-		<a href="#home" data-role="button" data-transition="slide" data-direction="reverse">
-		  <i class="fas fa-arrow-left"></i> Back to Home
-		</a>
-	  </div>
-
-	  <div data-role="footer" data-position="fixed">
-		<h4>By: Nur Najwa</h4>
-	  </div>
-	</div>
-
-	<!-- Menu 3 -->
-	<div data-role="page" id="services" data-theme="d">
-	  <div data-role="header">
-		<h1>Services</h1>
-	  </div>
-
-	  <div data-role="content">
-		<p>We provide many types of services, from </br>
-		selling medicine and be a one-stop station for people to consult</br>
-		their light sickness with our certified pharmacist.</p>
-		<a href="#home" data-role="button" data-transition="slide" data-direction="reverse">
-		  <i class="fas fa-arrow-left"></i> Back to Home
-		</a>
-	  </div>
-
-	  <div data-role="footer" data-position="fixed">
-		<h4>By: Nur Najwa</h4>
-	  </div>
-	</div>
-
-	<!-- Menu 4 -->
-	<div data-role="page" id="contact" data-theme="d">
-	  <div data-role="header">
-		<h1>Contact Us</h1>
-	  </div>
-
-	  <div data-role="content">
-		<div class="contact" id="Contact">
-			<h2>Contact Us</h2>
-			<i class="fa-solid fa-envelope"></i>
-			<p>pharmacycare@gmail.com</p><br>
-			<i class="fa-solid fa-phone"></i>
-			<p>+6 034 567 8910</p><br>
-			<i class="fa-solid fa-location-dot"></i>
-			<p>Balik Pulau, Pulau Pinang</p>
-		</div>
-		<a href="#home" data-role="button" data-transition="slide" data-direction="reverse">
-		  <i class="fas fa-arrow-left"></i> Back to Home
-		</a>
-	  </div>
-
-	  <div data-role="footer" data-position="fixed">
-		<h4>By: Nur Najwa</h4>
-	  </div>
-	</div>
-	
-			<!-- Add this div within the content of your "home" page -->
-		<div id="customDialog" data-role="popup" data-theme="a" data-dismissible="false">
-		  <div data-role="head">
-			<h1>Dialog Title</h1>
-		  </div>
-		  <div data-role="content">
-			<p>This is the content of the dialog.</p>
-		  </div>
-		  <div data-role="foot">
-			<a href="#" data-role="button" data-rel="back">Close</a>
-		  </div>
-		</div>
+    <header>
+        <h1>Bouncing Ball Game</h1>
+    </header>
+    <div class="container">
+		<div class="contact">
+		
+			<!-- Contact Button -->
+			<button id="callButton">Make a Call</button>
+			<button id="emailButton">Send Email</button>
+			<button id="smsButton">Send SMS</button>
 			
-		<script>
-		$(document).on("pagecreate", "#home", function () {
-		  // Initialize the popup
-		  $("#customDialog").popup();
+			<!-- Call Button -->
+			<a id="callLink" href="tel:+123456789"></a>
+			
+			<!-- Email Button -->
+			<a id="emailLink" href="mailto:info@example.com"></a>
+			
+			<!-- SMS/WhatsApp Button -->
+			<a id="whatsappLink" href="https://wa.me/123456789"></a>
+		</div>
+        <div class="box">
+            <div class="ball" id="ball"></div>
+            <div class="paddle" id="paddle"></div>
+        </div>
+		<p><span id="lives">Lives: 0</span> | <span id="timer">Time: 0.00s</span>   |  <span id="points">Points: 0</span></p>
+        <button id="restartBtn">Restart Game</button>
+		<table id="scoreTable">
+		<thead>
+                <tr>
+                    <th>Player Name</th>
+					<td id="playerName" class="centered"></td>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+	 <audio id="bounceSound" src="bouncing.wav"></audio>
+    <script src="script.js"></script>
+	<script>
+	
+        // JavaScript code to associate button clicks with anchor clicks
+        $(document).ready(function () {
+            $("#callButton").click(function () {
+                $("#callLink")[0].click();
+            });
 
-		  // Attach a click event handler to the button
-		  $("#openDialogButton").on("click", function () {
-			// Open the dialog when the button is clicked
-			$("#customDialog").popup("open");
-		  });
-		});
-		</script>
+            $("#emailButton").click(function () {
+                $("#emailLink")[0].click();
+            });
 
+            $("#smsButton").click(function () {
+                $("#whatsappLink")[0].click();
+            });
+        });
+    </script>
 </body>
 </html>
